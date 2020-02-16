@@ -5,19 +5,62 @@
 
 body {
   background: #fcc;
-} 
+  margin: 0;
+}
 
+nav {
+display: flex;
+flex-direction: column;
+justify-content: center;
+background: #333;
+display: none;
+}
+nav a {
+padding: 0.2em;
+color: #ccc;
+background: #555;
+text-decoration: none;
+transition: all 1.5s;
+}
+nav a:hover {
+color: #dfd;
+background: #797;
+}
 
+.menu{
+  background-color: #000050;
+  color: #F0FFFF;
+
+}
+
+.menu-toggle{
+  display: flex;
+}
+
+/*.menu:hover + nav,
+nav:hover{
+  line-height: 2em ;
+  display: flex;
+
+}*/
 
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
+
   body {
     background: #cfc;
-  } 
+  }
+nav{
+  display: flex;
+  flex-direction: row;
+}
+.menu{
+  display: none;
+}
+
 }
 
 
@@ -30,5 +73,5 @@ body {
 
   body {
     background: #ccf;
-  } 
+  }
 }
