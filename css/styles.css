@@ -1,39 +1,51 @@
 /* MOBILE AND GLOBAL STYLES */
-
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
-
 body {
   background: #fcc;
   margin: 0;
 }
 
-nav {
-display: flex;
-flex-direction: column;
-justify-content: center;
-background: #333;
-display: none;
-}
-nav a {
-padding: 0.2em;
-color: #ccc;
-background: #555;
-text-decoration: none;
-transition: all 1.5s;
-}
-nav a:hover {
-color: #dfd;
-background: #797;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #000050;
 }
 
-.menu{
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #333;
+  display: none;
+}
+
+nav a {
+  padding: 0.2em;
+  color: #ccc;
+  background: #555;
+  text-decoration: none;
+  transition: all 1.5s;
+}
+
+nav a:hover {
+  color: #dfd;
+  background: #797;
+}
+
+.logo {
+  cursor: pointer;
+  max-width: 20%
+}
+
+.menu {
   background-color: #000050;
   color: #F0FFFF;
-
 }
 
-.menu-toggle{
+.menu-toggle {
   display: flex;
 }
 
@@ -43,34 +55,28 @@ nav:hover{
   display: flex;
 
 }*/
-
 /* TABLET STYLES */
-
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-
   body {
     background: #cfc;
   }
-nav{
-  display: flex;
-  flex-direction: row;
-}
-.menu{
-  display: none;
-}
 
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu {
+    display: none;
+  }
 }
-
-
 
 /* DESKTOP STYLES */
-
 @media screen and (min-width: 1000px) {
 
   /* applies to screens wider than 999px */
-
   body {
     background: #ccf;
   }
