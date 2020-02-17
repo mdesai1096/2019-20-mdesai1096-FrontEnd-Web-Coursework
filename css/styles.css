@@ -20,6 +20,8 @@ nav {
   justify-content: center;
   background: #333;
   display: none;
+  flex: 1;
+  order: 1
 }
 
 nav a {
@@ -37,16 +39,29 @@ nav a:hover {
 
 .logo {
   max-width: 40%;
+  flex: 1;
+  order:2;
   
 }
+
+.searchicon{
+  max-width: 10%;
+  flex: 1;
+  order: 3;
+  }
 
 .menu {
   background-color: #000050;
   color: #F0FFFF;
+  font-size: 1.5em;
+  /*flex: 1;
+  order: 1;*/
 }
 
 .menu-toggle {
   display: flex;
+  flex: 1;
+  order: 1;
 
 }
 
@@ -96,5 +111,10 @@ nav:hover{
   /* applies to screens wider than 999px */
   body {
     background: #ccf;
+  }
+
+  .logo {
+    max-width: 35%;
+    
   }
 }
