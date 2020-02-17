@@ -27,7 +27,7 @@ nav a {
   color: #ccc;
   background: #555;
   text-decoration: none;
-  transition: all 1.5s;
+  transition: all 1.5s ease 0;
 }
 
 nav a:hover {
@@ -36,8 +36,8 @@ nav a:hover {
 }
 
 .logo {
-  cursor: pointer;
-  max-width: 20%
+  max-width: 40%;
+  
 }
 
 .menu {
@@ -47,6 +47,7 @@ nav a:hover {
 
 .menu-toggle {
   display: flex;
+
 }
 
 /*.menu:hover + nav,
@@ -66,7 +67,23 @@ nav:hover{
   nav {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    background: #333;
+    margin: 30px;
+    font: larger;
   }
+   nav a {
+     font-size: xx-large;
+
+   }
+
+  
+  .logo {
+    max-width: 50%;
+    
+  }
+
+
 
   .menu {
     display: none;
