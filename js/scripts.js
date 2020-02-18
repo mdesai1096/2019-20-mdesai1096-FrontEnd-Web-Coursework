@@ -5,5 +5,8 @@ const toggleMenu = () =>
 {
   console.log("called toggleMenu");
   menuNav.classList.toggle("menu-toggle");
+  
+
 }
 menuToggle.addEventListener("click", toggleMenu);
+
