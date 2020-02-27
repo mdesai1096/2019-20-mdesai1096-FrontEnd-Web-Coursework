@@ -40,15 +40,15 @@ nav a:hover {
 .logo {
   max-width: 40%;
   flex: 1;
-  order:2;
-  
+  order: 2;
+
 }
 
-.searchicon{
+.searchicon {
   max-width: 10%;
   flex: 1;
   order: 3;
-  }
+}
 
 .menu {
   background-color: #000050;
@@ -79,22 +79,22 @@ nav:hover{
     background: #cfc;
   }
 
-   nav {
+  nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
     background: #333;
     margin: 30px;
     font: larger;
-   
+
   }
 
-   nav a {
-     font-size: xx-large;
-     flex: 1;
-     order: 1;
+  nav a {
+    font-size: xx-large;
+    flex: 1;
+    order: 1;
 
-   }
+  }
 
   /*
   .logo {
@@ -107,7 +107,7 @@ nav:hover{
   .menu {
     display: none;
   }
-} 
+}
 
 /* DESKTOP STYLES */
 @media screen and (min-width: 1000px) {
