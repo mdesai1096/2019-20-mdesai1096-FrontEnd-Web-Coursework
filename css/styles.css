@@ -15,6 +15,23 @@ header{
   color: #F0FFFF;
 }
 
+.logo {
+  max-width: 40%;
+  flex: 1;
+  order: 2;
+}
+
+.searchicon{
+    max-width: 20%;
+    flex: 1;
+    order: 3;
+  }
+
+.menu{
+  background-color: #000050;
+  color: #F0FFFF;
+}
+
 nav {
 display: flex;
 flex-direction: column;
@@ -22,6 +39,7 @@ justify-content: center;
 background: #333;
 display: none;
 }
+
 nav a {
 padding: 0.2em;
 color: #ccc;
@@ -34,38 +52,36 @@ color: #dfd;
 background: #797;
 }
 
-.logo {
-  max-width: 40%;
-  flex: 1;
-  order: 2;
+fieldset {
+display: flex;
+flex-direction: column;
+justify-content: center;
+background: #333;
+display: none;
 }
 
-.searchicon {
-  max-width: 10%;
-  flex: 1;
-  order: 3;
-}
-
-.searchToggle{
-    display: flex;
-}
-
-.searchBox{
+input {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #333;
-  display: none;
+  flex:2;
+  order:1;
+  padding-left: 1em;
+  flex: 1;
+  min-width: 5em;
 }
 
-.menu{
-  background-color: #000050;
-  color: #F0FFFF;
-
-
+button{
+  display: flex;
+  flex:1;
+  order:2;
 }
+
+
 
 .menu-toggle{
+  display: flex;
+}
+
+.search-toggle{
   display: flex;
 }
 
