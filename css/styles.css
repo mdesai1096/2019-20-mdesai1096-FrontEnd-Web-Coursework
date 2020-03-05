@@ -144,12 +144,12 @@ nav:hover{
 /* DESKTOP STYLES */
 @media screen and (min-width: 1000px) {
   /* applies to screens wider than 999px */
-  /* body {
+   body {
     background: #ccf;
   }
 
   .logo {
     max-width: 35%;
 
-  } */
+  } 
 }
