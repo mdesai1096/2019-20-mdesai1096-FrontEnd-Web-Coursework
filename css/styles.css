@@ -100,6 +100,15 @@ img{
   display: flex;
 }
 
+.GolfHide{
+  display: none;
+}
+
+.GolfShow{
+  display: block;
+}
+
+
 /*.menu:hover + nav,
 nav:hover{
   line-height: 2em ;

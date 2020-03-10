@@ -25,31 +25,32 @@ searchToggle.addEventListener("click", toggleSearch)
 })();
 
 (() => {
-var slideIndex = 0;
+let slideIndex = 0;
 carousel();
 
 function carousel() {
-  var i;
-  var x = document.getElementsByClassName("Golf");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+
+  let x = document.getElementById("Golf");
+  console.log(x);
+  for (let i = 0; i < x.length; i++) {
+    x[i].classList.toggle("Hide");
+
   }
   slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = "block";
+  if ( slideIndex  > x.length) {slideIndex = 1}
+ x[slideIndex-1].classList.toggle("Show");
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 })();
 
 (() => {
-var slideIndex = 0;
-carousel();
+let slideIndex = 0;
+carousel1();
 
-function carousel() {
+function carousel1() {
   console.log(slideIndex);
-  var i;
-  var x = document.getElementsByClassName("tesla");
-  for (i = 0; i < x.length; i++) {
+  const x = document.getElementsByClassName("tesla");
+  for (let i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
   slideIndex++;
@@ -58,6 +59,6 @@ function carousel() {
   console.log(slideIndex);
   x[slideIndex-1].style.display = "block";
   console.log(slideIndex);
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel1, 2000); // Change image every 2 seconds
 }
 })();
