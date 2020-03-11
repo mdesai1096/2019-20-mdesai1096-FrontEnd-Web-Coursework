@@ -100,13 +100,17 @@ img{
   display: flex;
 }
 
-.GolfHide{
+.Content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.Hide{
   display: none;
 }
 
-.GolfShow{
-  display: block;
-}
+
 
 
 /*.menu:hover + nav,
