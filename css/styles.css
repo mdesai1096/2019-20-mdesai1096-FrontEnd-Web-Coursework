@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 
-header{
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,108 +17,148 @@ header{
 
 .logo {
   max-width: 40%;
-  flex: 1;
+  flex: 2;
   order: 2;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-right: 25%;
 }
 
-.searchicon{
-    max-width: 20%;
-    flex: 1;
-    order: 3;
-  }
-
-.menu{
+.menu {
   background-color: #000050;
   color: #F0FFFF;
+  font-size: 35px;
+  flex: 1;
+  order: 1
 }
 
 nav {
-display: flex;
-flex-direction: column;
-justify-content: center;
-background: #333;
-display: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
 nav a {
-padding: 0.2em;
-color: #ccc;
-background: #555;
-text-decoration: none;
-transition: all 1.5s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
+
 nav a:hover {
-color: #dfd;
-background: #797;
+  color: #dfd;
+  background: #797;
 }
 
-fieldset {
-display: flex;
-flex-direction: column;
-justify-content: center;
-background: #333;
-display: none;
-}
-
-input {
-  display: flex;
-  flex:2;
-  order:1;
-  padding-left: 1em;
-  flex: 1;
-  min-width: 5em;
-}
-
-button{
-  display: flex;
-  flex:1;
-  order:2;
+nav .closebtn {
+  padding-bottom: 5%;
+  margin-left: 85%;
+  font-size: 60px;
 }
 
 table {
   border-collapse: collapse;
   max-width: 100%;
 }
+
 table, td, th {
-border: 1px solid black;
+  border: 1px solid black;
 }
 
-img{
+img {
   max-width: 100%;
-   height: auto;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
-.menu-toggle{
-  display: flex;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.search-toggle{
-  display: flex;
+.menu-toggle {
+  width: 100%;
 }
 
-.Content {
+form{
+  margin: 5px;
+}
+
+section {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
 }
 
-.Hide{
+.Hide {
   display: none;
 }
 
+figure {
+  margin: 0;
+}
 
+.mySlides {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
+@keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.Additional{
+  display: none;
+}
+ul {
+  list-style-type: none;
+  display: table;
+  width: 90%;
+  border-spacing: 0 10px;
+}
+
+li {
+  display: table-row;
+}
+
+li strong, li .txt {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+li .txt {
+  width: 60%;
+  padding-right: 10px;
+}
 
 /*.menu:hover + nav,
 nav:hover{
   line-height: 2em ;
   display: flex;
 }*/
-
 /* TABLET STYLES */
 @media screen and (min-width: 500px) {
 
@@ -127,42 +167,108 @@ nav:hover{
     background: #cfc;
   }
 
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background: #333;
-    margin: 30px;
-    font: larger;
-
-  }
-
   nav a {
-    font-size: xx-large;
-    flex: 1;
-    order: 1;
+    font-size: 35px;
   }
 
-  /*
   .logo {
-    max-width: 50%;
-
+    max-width: 25%;
+    margin-right: 40%;
   }
-*/
-  .menu {
-    display: none;
+
+  .menu-toggle {
+    width: 40%;
+  }
+
+  .content-toggle {
+    margin-left: 40%;
+  }
+
+  section {
+    flex-direction: row;
+  }
+
+  .golf {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .Tesla {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .bently {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .Additional{
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    border-spacing: 0 10px;
+  }
+
+  li {
+    flex: 0 0 auto;
+    margin: 10px;
   }
 }
 
 /* DESKTOP STYLES */
 @media screen and (min-width: 1000px) {
+
   /* applies to screens wider than 999px */
-   body {
+  body {
     background: #ccf;
   }
 
-  .logo {
-    max-width: 35%;
+  nav {
+    order: 2;
+    left: 0;
+    flex-direction: row;
+    position: sticky;
+    width: auto;
+    margin: 0;
+    background-color: #000050;
+  }
 
+  nav a {
+    font-size: 30px;
+  }
+
+  nav .closebtn {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    order: 1;
+    max-width: 125px;
+    margin-left: 2%;
+  }
+
+  .golf {
+    flex: 2;
+    order: 1;
+  }
+
+  .Tesla {
+    flex: 1;
+    order: 2
+  }
+
+  .bently {
+    flex: 1;
+    order: 3;
   }
 }
