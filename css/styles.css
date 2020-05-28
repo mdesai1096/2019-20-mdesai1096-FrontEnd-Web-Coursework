@@ -2,7 +2,7 @@
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 body {
-  background: #fcc;
+  background: #ccf;
   margin: 0;
 }
 
@@ -27,7 +27,7 @@ header {
   color: #F0FFFF;
   font-size: 35px;
   flex: 1;
-  order: 1
+  order: 1;
 }
 
 nav {
@@ -51,11 +51,14 @@ nav a {
   color: #818181;
   display: block;
   transition: 0.3s;
+  transition: font-size 12s;
+  transition: color 12s;
 }
 
 nav a:hover {
   color: #dfd;
   background: #797;
+  font-size: 50px;
 }
 
 nav .closebtn {
@@ -83,16 +86,6 @@ img {
 
 .menu-toggle {
   width: 100%;
-}
-
-form{
-  margin: 5px;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
 }
 
 .Hide {
@@ -130,18 +123,22 @@ figure {
   color: white;
 }
 
-.Additional{
+.Additional {
   display: none;
 }
+
 ul {
   list-style-type: none;
   display: table;
   width: 90%;
   border-spacing: 0 10px;
+  padding: 16px 20px;
+  border-radius: 4px;
 }
 
 li {
   display: table-row;
+  border-style: solid;
 }
 
 li strong, li .txt {
@@ -154,6 +151,76 @@ li .txt {
   padding-right: 10px;
 }
 
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form>label {
+  flex: 0 0 100%;
+  font-size: 25px;
+}
+
+input, select {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.news>h2 {
+  flex: 0 0 100%;
+}
+
+.preview {
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  flex-wrap: wrap;
+}
+
+.item1 {
+  flex: 1;
+  position: relative;
+}
+
+.item2 {
+  display: none;
+}
+
+.item3 {
+  display: none;
+}
+
+.preview>h2 {
+  flex: 0 0 100%;
+}
+
+.review {
+  padding: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.review>h2 {
+  flex: 0 0 100%;
+}
+
+.column {
+  flex: 1;
+}
+
+
+
 /*.menu:hover + nav,
 nav:hover{
   line-height: 2em ;
@@ -163,10 +230,6 @@ nav:hover{
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  body {
-    background: #cfc;
-  }
-
   nav a {
     font-size: 35px;
   }
@@ -184,26 +247,24 @@ nav:hover{
     margin-left: 40%;
   }
 
-  section {
-    flex-direction: row;
+  article {
+    margin-left: 1%;
+    margin-right: 1%;
   }
 
   .golf {
-    margin-left: 1%;
-    margin-right: 1%;
+    flex: 1;
   }
 
   .Tesla {
-    margin-left: 1%;
-    margin-right: 1%;
+    flex: 1;
   }
 
   .bently {
-    margin-left: 1%;
-    margin-right: 1%;
+    flex: 1;
   }
 
-  .Additional{
+  .Additional {
     display: block;
   }
 
@@ -219,16 +280,44 @@ nav:hover{
     flex: 0 0 auto;
     margin: 10px;
   }
+
+  .news {
+    flex-direction: row;
+  }
+
+  .preview {
+    flex-direction: row;
+  }
+
+  .item1 {
+    display: block;
+    flex: 1;
+  }
+
+  .item2 {
+    display: block;
+    flex: 1;
+  }
+
+  .item3 {
+    display: block;
+    flex: 1;
+  }
+
+  .review {
+    flex-direction: row;
+  }
+
+  .column {
+    margin: 1%;
+    text-align: justify;
+  }
 }
 
 /* DESKTOP STYLES */
 @media screen and (min-width: 1000px) {
 
   /* applies to screens wider than 999px */
-  body {
-    background: #ccf;
-  }
-
   nav {
     order: 2;
     left: 0;
@@ -264,7 +353,7 @@ nav:hover{
 
   .Tesla {
     flex: 1;
-    order: 2
+    order: 2;
   }
 
   .bently {

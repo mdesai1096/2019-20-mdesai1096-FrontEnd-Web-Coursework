@@ -1,26 +1,26 @@
 "use strict";
 
 (() => {
-  /*code taken and refined from https://www.w3schools.com/howto/howto_js_slideshow.asp */
-  let slideIndex = [1, 1, 1];
-  carousel("Golf", 0);
-  carousel("tesla", 1);
-  carousel("Bentley", 2);
+    /*code taken and refined from https://www.w3schools.com/howto/howto_js_slideshow.asp */
+    let slideIndex = [1, 1, 1];
+    carousel("Golf", 0);
+    carousel("tesla", 1);
+    carousel("Bentley", 2);
 
 
-  function carousel(slideId, no) {
-    const imageclass = document.getElementsByClassName(slideId);
-    for (let index = 0; index < imageclass.length; index++) {
-      imageclass[index].classList.add("Hide");
+    function carousel(slideId, no) {
+        const imageclass = document.getElementsByClassName(slideId);
+        for (let index = 0; index < imageclass.length; index++) {
+            imageclass[index].classList.add("Hide");
+        }
+        slideIndex[no]++;
+        if (slideIndex[no] > imageclass.length) {
+            slideIndex[no] = 1
+        }
+        imageclass[slideIndex[no] - 1].classList.remove("Hide");
+        setTimeout(carousel, 2000, slideId, no);
+
     }
-    slideIndex[no]++;
-    if (slideIndex[no] > imageclass.length) {
-      slideIndex[no] = 1
-    }
-    imageclass[slideIndex[no] - 1].classList.remove("Hide");
-    setTimeout(carousel, 2000, slideId, no);
-
-  }
 })();
 
 
